@@ -1,6 +1,6 @@
 package command
 
-import "github.com/crucialcarl/game_command_pattern/pkg/player"
+import "github.com/crucialcarl/game_command_pattern/internal/player"
 
 type MoveCommand struct {
 	Player          *player.Player

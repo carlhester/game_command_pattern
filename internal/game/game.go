@@ -3,8 +3,8 @@ package game
 import (
 	"fmt"
 
-	"github.com/crucialcarl/game_command_pattern/pkg/command"
-	"github.com/crucialcarl/game_command_pattern/pkg/player"
+	"github.com/crucialcarl/game_command_pattern/internal/command"
+	"github.com/crucialcarl/game_command_pattern/internal/player"
 )
 
 type Game struct {
