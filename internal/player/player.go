@@ -1,9 +1,11 @@
 package player
 
+import "github.com/crucialcarl/game_command_pattern/internal/entity"
+
 type Player struct {
-	room int
+	*entity.Entity
 }
 
-func (p *Player) SetRoom(room int) {
-	p.room = room
+func NewPlayer() *Player {
+	return &Player{entity.NewEntity(1)}
 }

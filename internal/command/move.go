@@ -1,17 +1,17 @@
 package command
 
-import "github.com/crucialcarl/game_command_pattern/internal/player"
+import "github.com/crucialcarl/game_command_pattern/internal/entity"
 
 type MoveCommand struct {
-	Player          *player.Player
+	Entity          *entity.Entity
 	DestinationRoom int
 }
 
-func (m MoveCommand) Move(p *player.Player, d int) {
-	m.Player = p
+func (m MoveCommand) Move(e *entity.Entity, d int) {
+	m.Entity = e
 	m.DestinationRoom = d
 }
 
 func (m MoveCommand) Execute() {
-	m.Player.SetRoom(m.DestinationRoom)
+	m.Entity.SetRoom(m.DestinationRoom)
 }
