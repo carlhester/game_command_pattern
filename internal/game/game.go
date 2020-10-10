@@ -21,8 +21,8 @@ func (g *Game) Run() {
 	g.player = player.NewPlayer()
 	g.npc = npc.NewNPC()
 
-	fmt.Println("player: ", g.player.Entity.Room)
-	fmt.Println("npc: ", g.npc.Entity.Room)
+	fmt.Println("player: ", g.player.GetRoom())
+	fmt.Println("npc: ", g.npc.GetRoom())
 
 	moveCommand := command.MoveCommand{g.player.Entity, 2}
 	moveCommand2 := command.MoveCommand{g.npc.Entity, 1}
@@ -37,6 +37,6 @@ func (g *Game) Run() {
 	}
 
 	executor.ExecuteCommands()
-	fmt.Println("player: ", g.player.Entity.Room)
-	fmt.Println("npc: ", g.npc.Entity.Room)
+	fmt.Println("player: ", g.player.GetRoom())
+	fmt.Println("npc: ", g.npc.GetRoom())
 }

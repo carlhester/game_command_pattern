@@ -11,3 +11,7 @@ func NewEntity(room int) *Entity {
 func (e *Entity) SetRoom(room int) {
 	e.Room = room
 }
+
+func (e *Entity) GetRoom() int {
+	return e.Room
+}
